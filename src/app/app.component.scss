@@ -1,0 +1,12 @@
+@import '../sass/styles.scss';
+
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background: url("../assets/images/grid.svg");
+    background-size: 100vw 100vh;
+    background-color: $silver;
+    z-index: -1;
+}
+

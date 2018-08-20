@@ -1,0 +1,108 @@
+$SelinMargin: 15vh;
+
+.selin, .selin >* {
+    margin-top: 5vh;
+    left:50%;
+}
+    
+.selin {
+    order: 1;
+    height:$SelinMargin; 
+
+    >* {        
+        width: 100vw;
+        line-height: 1.2;
+        position: absolute;
+        animation: bounce 1.5s ease infinite;
+        text-align: center;
+
+        /* Landscape */
+        @media screen and (orientation:landscape){
+            font-size: 2.287em;
+        }
+        /* Portrait */
+        @media screen and (orientation:portrait), screen and (min-width: 720px)  {
+            font-size: 3.998em;
+        }
+    }
+    .title-solid {
+    }
+    .title-3d {
+        animation-delay:-0.67s;
+    }
+    .title-dot{
+        animation-delay:-0.33s;
+        mix-blend-mode: difference;
+
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform:translate(-50%,-50%) translateY(-2px);
+    }
+    50% {
+        transform:translate(-50%,-50%) translateY(2px);
+    }
+}
+
+nav{
+    order: 2;
+    @media screen and (orientation:portrait) {
+        padding-top: $SelinMargin;
+    }
+    text-align: center;
+    a{
+        color: white;
+        font-size: 1.75em;
+        display: block;
+        @media screen and (orientation:portrait) {
+           line-height: 2em;
+        }
+        /* Landscape */
+        @media screen and (orientation:landscape) {
+            line-height: 12.5vh;
+        }
+    }
+}
+
+.socials {
+    
+    
+    @media screen and (orientation:portrait) {
+        padding-top: 0;
+     }
+     /* Landscape */
+     @media screen and (orientation:landscape) {
+        padding-top: 6vh;
+     }
+
+    a{
+        display: inline-block;
+        width: 25%;
+        
+        img{
+            width: 40px;
+            height: 40px;
+            padding: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            &:hover{
+                width: 55px;
+                height: 55px;
+                padding: 0;
+                border-radius: 0;
+                background: transparent;
+                filter: invert(30%);
+            }
+        }
+    }
+}
+
+.uppernav{
+    padding-top: $SelinMargin;
+    height: 70vh;
+    top: 0 ;
+    background-image: url("../../assets/images/yellowdrip.svg");
+    background-size: contain;
+}

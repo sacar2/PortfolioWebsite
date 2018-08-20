@@ -23,9 +23,13 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/sass/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "sass"
+              ]}
           },
           "configurations": {
             "production": {
@@ -123,5 +127,10 @@
       }
     }
   },
-  "defaultProject": "angular-portfolio"
+  "defaultProject": "angular-portfolio",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

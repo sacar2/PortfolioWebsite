@@ -1,0 +1,68 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'colors/colors.scss';
+@import '_variables.scss';
+@import '_typography.scss';
+
+html{
+    
+    body{
+        height: 100vh;
+        margin: 0;
+    }
+}
+
+.panel{
+    background: rgba(255, 255, 255, 0.99);
+    margin: 50px 2vw;
+    border-radius: 1em;
+    padding: 30px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+small{
+    margin: 2px;
+    padding: 5px;
+    text-transform: uppercase;
+    text-align: left;
+    &::after{
+        padding-left: 15px;
+    }
+}
+
+.title-side{
+    text-align: left;
+    width: 120px;
+    position: relative;
+	transform: rotate(90deg);
+    transform-origin: left top 0;
+    top:-20px;
+    small{
+        line-height: .5em;
+        color: $red;
+        background-color: blue;
+    }
+}
+
+
+.project{
+    border-radius: 2px;
+    margin: 0 10px 20px 10px;
+    padding: 3em;
+    display: block;
+    -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+              page-break-inside: avoid; /* Firefox */
+                   break-inside: avoid; /* IE 10+ */
+
+    small{
+        padding-left: 0;
+        margin-left: 0;
+        &:not(:last-child) {
+            &::after {
+                content: "/";
+            }
+        }
+    }
+}
